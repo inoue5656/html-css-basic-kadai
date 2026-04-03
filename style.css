@@ -1,27 +1,68 @@
-html {
+body,h1,p {
+  margin: 0;
+}
+p,a {
   font-size: 20px;
 }
-
-body {
-  font-family: "Arial","Meiryo",sans-serif;
+h1 {
+  margin-bottom: 20px;
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+  color: rgb(255, 255, 255)
+}
+main {
+  padding: 10px;
+  margin: 10px;
+}
+#parent {
+  display: flex;
+  justify-content: space-around;
+}
+.contents {
+  border: solid 3px rgb(238, 204, 204);
+  flex-basis: 25%;
+  padding: 10px 15px;
+  margin: 20px 0px;
   text-align: center;
 }
-
-.blue {
-  color: skyblue;
+h2 {
+  font-size: 25px;
+  border-bottom:  3px dotted rgb(236, 122, 122);
 }
-.pink {
-  color: rgb(255, 192, 203) ;
+h2::before {
+  content: "●";
+  color: rgb(239, 111, 139);
 }
-
-h1 {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 2rem;
-  letter-spacing: 1.2em;
-  text-shadow: 2px 2px 4px gray;
-  border-bottom: solid 3px rgb(115, 115, 114);
-}
-
-#basic p {
+.contents p:nth-of-type(2)::first-letter {
   font-weight: bold;
+  color:rgb(97, 206, 249);
+}
+.contents img {
+  margin: 10px 0px;
+  width: 70%;
+}
+footer {
+ background-color: rgb(244, 79, 79);
+ text-align: center;
+}
+a {
+  color: rgb(255, 255, 255);
+}
+a:visited {
+  color: rgb(193, 234, 251);
+}
+a:hover {
+  color: rgb(245, 178, 168);
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 25px;
+  }
+  #parent {
+    display: flex;
+    flex-direction: column;
+  }
 }
