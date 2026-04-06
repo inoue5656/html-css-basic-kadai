@@ -11,7 +11,7 @@ h1 {
   color: rgb(255, 255, 255)
 }
 main {
-  padding: 10px;
+  padding: 10px;/*padding: 10px;のみで良い*/
   margin: 10px;
 }
 #parent {
@@ -33,7 +33,7 @@ h2::before {
   content: "●";
   color: rgb(239, 111, 139);
 }
-.contents p:nth-of-type(2)::first-letter {
+.contents p:nth-of-type(2)/*ここに「,」はいらない*/::first-letter {
   font-weight: bold;
   color:rgb(97, 206, 249);
 }
@@ -45,7 +45,7 @@ footer {
  background-color: rgb(244, 79, 79);
  text-align: center;
 }
-a {
+footer a {
   color: rgb(255, 255, 255);
 }
 a:visited {
@@ -62,7 +62,6 @@ a:hover {
     font-size: 25px;
   }
   #parent {
-    display: flex;
     flex-direction: column;
   }
 }
